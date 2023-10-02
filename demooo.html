@@ -1,0 +1,20 @@
+<html>  
+<head>  
+    <script type="text/javascript">  
+        function Focus_In (event) {  
+            event.srcElement.style.color = "red";  
+                    }  
+        function Focus_Out (event) {  
+            event.srcElement.style.color = "blue";  
+        }  
+</script>  
+</head>  
+<body>  
+<center>    <h3>Click on the textbox and observe </h3><br></br>  
+    <form onfocusin="Focus_In (event)" onfocusout="Focus_Out (event)">  
+    <b>    User name: <input type="text value="Username"/></b><br/>  
+<br>  
+    <b>   Password <input type="password" value="*******"/></b> </center>  
+    </form>  
+</body>  
+</html>  

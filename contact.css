@@ -1,0 +1,120 @@
+.navbar-brand .logo {
+    filter: brightness(80%) invert(0%);
+    width: 8rem;
+    height: 40px;
+    object-fit: contain;
+  }
+  body {
+    
+    
+    background-image: url('contaaact.webp');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    
+  }
+
+  .container {
+    
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+  }
+
+  a {
+    color: #dfb432;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  
+  @media (max-width: 800px) {
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      max-width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    body {
+      padding: 10px;
+    }
+  }
+
+  
+  form {
+    margin-top: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #dfb432;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dfb432;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #c49c17;
+  }
+  .error-message {
+    color: red;
+  }

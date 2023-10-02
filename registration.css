@@ -1,0 +1,108 @@
+  .navbar-brand .logo {
+    filter: brightness(80%) invert(0%);
+    width: 8rem;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  body{
+    background-color: #dfc1bd;
+  }
+
+  .container {
+    border: 1px solid #d8cfcf;
+    padding: 20px;
+    background-color: #a8a8f0;
+    border-radius: 10px;
+    max-width: 500px;
+    margin:20px auto;
+  }
+
+  h2 {
+    text-decoration: underline;
+    margin: 0;
+    text-align: center;
+    color: #555;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group label {
+    display: inline-block;
+    width: 30%;
+    font-weight: bold;
+    color: #555;
+    
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="date"],
+  .form-group input[type="number"],
+  .form-group input[type="tel"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group select {
+    display: inline-block;
+    width: 65%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-group .radio-group {
+    display: inline-block;
+    width: 65%;
+  }
+
+  .form-group .radio-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #d7301e;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px auto; 
+    
+  }
+
+  input[type="submit"]:hover {
+    background-color: #fc0101;
+  }
+
+  .error-message {
+    color: red;
+  }
+
+  @media (max-width: 767px) {
+    .logo {
+      width: 6rem;
+    }
+  
+    .nav-item {
+      margin-bottom: 10px;
+    }
+  
+  }
+  
+  @media (max-width: 576px) {
+    .login-container {
+      padding: 10px;
+    }
+  
+    .login-header h1 {
+      font-size: 20px;
+    }
+  }

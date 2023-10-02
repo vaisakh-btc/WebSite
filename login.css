@@ -1,0 +1,116 @@
+.navbar-brand .logo {
+  filter: brightness(80%) invert(0%);
+  width: 8rem;
+  height: 40px;
+  object-fit: contain;
+}
+body{
+  background-image: url('login.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.login-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #865f5f;
+  border-radius: 10px;
+  background-color: #e6b9b9;
+  font-family: Arial, sans-serif;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-header h1 {
+  margin: 0;
+  color: #333;
+  font-weight: bolder;
+}
+
+.login-input {
+  margin-bottom: 15px;
+}
+
+.login-input input[type="email"],
+.login-input input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d19898;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.login-input input[type="email"]:focus,
+.login-input input[type="password"]:focus {
+  outline: none;
+  border-color: #e33f2c;
+  box-shadow: 0 0 5px #e33f2c;
+}
+
+.login-checkbox {
+  margin-bottom: 15px;
+}
+
+.login-checkbox label {
+  font-size: 14px;
+  color: #333;
+}
+
+.login-button input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #d7301e;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px auto; 
+}
+
+.login-button input[type="submit"]:hover {
+  background-color: #fc0101;
+}
+
+.login-message {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-message a {
+  color: #0d0de2; 
+  text-decoration: none;
+}
+
+.login-message a:hover {
+  text-decoration: underline; 
+}
+
+.error-message {
+  color: red;
+}
+@media (max-width: 767px) {
+  .logo {
+    width: 6rem;
+  }
+
+  .nav-item {
+    margin-bottom: 10px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .login-container {
+    padding: 10px;
+  }
+
+  .login-header h1 {
+    font-size: 20px;
+  }
+}

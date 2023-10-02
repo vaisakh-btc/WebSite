@@ -1,0 +1,59 @@
+.navbar-brand .logo {
+    filter: brightness(80%) invert(0%);
+    width: 8rem;
+    height: 40px;
+    object-fit: contain;
+  }
+  body{
+    background-color: rgb(214, 190, 190);
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ddd9d9;
+    
+  }
+
+  .about-section {
+    margin-bottom: 30px;
+
+  }
+
+  .team-section {
+    margin-bottom: 30px;
+  }
+
+  .section-heading {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+
+  .about-section p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .team-section img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .team-section h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .team-section p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }

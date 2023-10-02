@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+    body {
+      max-width: 500px;
+      margin: 20px auto;
+      background-image: url('reg.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+    }
+
+    div.container {
+      border: 1px solid #d8cfcf;
+      padding: 20px;
+      background-color: #a8a8f0;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-decoration: underline;
+      margin: 0;
+      text-align: center;
+      color: #555;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: inline-block;
+      width: 30%;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="number"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group select {
+      display: inline-block;
+      width: 65%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group .radio-group {
+      display: inline-block;
+      width: 65%;
+    }
+
+    .form-group .radio-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="submit"] {
+      width: 200px;
+      height: 30px;
+      background-color: #9a3d3d;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+    }
+
+    input[type="submit"]:hover {
+      background-image: linear-gradient(to bottom, #d13939, #9a3d3d);
+    }
+  </style>
+</head>
+<body onload="loadEvent()" >
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" onfocusout="validateFirstName()" required>
+      </div>
+
+      <div class="form-group">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name"  onfocusout="validateLastName()" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required onchange="calculateAge()">
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <div class="radio-group">
+          <label for="male">
+            <input type="radio" id="male" name="gender" value="male" required>
+            Male
+          </label>
+          <label for="female">
+            <input type="radio" id="female" name="gender" value="female">
+            Female
+          </label>
+          <label for="other">
+            <input type="radio" id="other" name="gender" value="other">
+            Other
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone number:</label>
+        <input type="number" id="phone" name="phone"  onfocusout="validatePhoneNumber()" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" id="email" name="email"  onfocusout="validateEmail()" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address"  onfocusout="validateAddress()" required>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State:</label>
+        <select id="state" name="state" required>
+          <option value="" selected disabled>Select State</option>
+          <option>Kerala</option>
+          <option>Tamilnadu</option>
+          <option>Haryana</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City:</label>
+        <select id="city" name="city" required>
+          <option value="" selected disabled>Select City</option>
+          <option>Mannarkkad</option>
+          <option>Kodaly</option>
+          <option>Kakkanadu</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"  onfocusout="validateUserName()" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"  onfocusout="validatePassword()" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password"  onfocusout="validateConfirm()" required>
+      </div>
+
+      <input type="submit" value="Register" id="submit-btn">
+    </form>
+  </div>
+
+  <script>
+
+        function loadEvent() {
+          alert("Fill the registration Form");
+        }
+
+    
+
+        function validateFirstName() {
+            var firstName = document.getElementById("first-name").value;
+            if (firstName.trim() === "" || /\d/.test(firstName)) {
+                alert("Please enter your first name without numbers");
+                return false;
+            }
+            return true;
+        }
+
+        function validateLastName() {
+            var lastName = document.getElementById("last-name").value;
+            if (lastName.trim() === "" || /\d/.test(lastName)) {
+                alert("Please enter your last name without numbers");
+                return false;
+            }
+            return true;
+        }
+
+        function validatePhoneNumber() {
+            var phoneNumber = document.getElementById("phone").value;
+            var phoneRegex = /^\d{10}$/; 
+            if (!phoneRegex.test(phone)) {
+              alert("Please enter a valid 10-digit phone number.");
+              return false;
+      }
+      return true;
+        }
+
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var email = /\S+@\S+\.\S+/;
+            if (!email.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            return true;
+        }
+
+        function validateAddress() {
+            var address = document.getElementById("address").value;
+            if (address.trim() === "") {
+                alert("Please enter your address.");
+                return false;
+            }
+            return true;
+        }
+
+        function validateUserName() {
+            var username = document.getElementById("username").value;
+            if (username.trim() === "") {
+                alert("Please enter username.");
+                return false;
+            }
+            return true;
+        }
+
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            if (password.trim() === "" || password !== confirmPassword) {
+                alert("Please enter a password and make sure the passwords match.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateConfirm() {
+            var confirm = document.getElementById("confirm-password").value;
+            if (confirm.trim() === "") {
+                alert("Please confirm your password.");
+                return false;
+            }
+            return true;
+        }
+
+    function calculateAge() {
+      var dobInput = document.getElementById("dob");
+      var dob = new Date(dobInput.value);
+      var today = new Date();
+      var age = today.getFullYear() - dob.getFullYear();
+   
+      if (today.getMonth() < dob.getMonth() || (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate())) {
+        age--;
+      }
+
+      var ageInput = document.getElementById("age");
+      ageInput.value = age;
+    }
+
+  </script>
+</body>
+</html>
